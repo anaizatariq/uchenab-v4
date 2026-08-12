@@ -66,47 +66,50 @@
     onScroll();
   }
 
-  // Dynamic Active Navigation State
+  // Dynamic Active Navigation State — "winner takes all" approach
+  // Collects all candidates with scores, then activates only the best match.
   var currentUrl = window.location.href.split('#')[0].split('?')[0];
-  var currentDir = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
+  var currentPath = window.location.pathname; // e.g. /research/oric.html
+  var currentSegment = currentPath.split('/').filter(Boolean)[0] || ''; // e.g. "research"
 
   var mainNavLinks = document.querySelectorAll('.uc-nav .nav-link');
+  var bestMatch = null;
+  var bestScore = -1;
+
   mainNavLinks.forEach(function (link) {
     link.classList.remove('active');
-    var linkUrl = link.href.split('#')[0].split('?')[0];
-    var linkDir = linkUrl.substring(0, linkUrl.lastIndexOf('/'));
+    var score = -1;
 
-    // Check direct link (if it's not a void link)
-    if (!linkUrl.includes('javascript:void')) {
-      if (currentUrl === linkUrl) {
-        link.classList.add('active');
-      } else if (currentDir === linkDir && currentDir !== '') {
-        if (link.textContent.trim().toLowerCase() !== 'home') {
-          link.classList.add('active');
-        }
-      }
-    }
-
-    // Check nested dropdown items
     var parentLi = link.closest('.v3-has-dropdown');
     if (parentLi) {
       var dropdownItems = parentLi.querySelectorAll('.v3-dropdown-item');
       dropdownItems.forEach(function(dropItem) {
         var dropUrl = dropItem.href.split('#')[0].split('?')[0];
-        var dropDir = dropUrl.substring(0, dropUrl.lastIndexOf('/'));
-        
         if (currentUrl === dropUrl) {
-           link.classList.add('active');
-        } else if (currentDir === dropDir && currentDir !== '') {
-           // We ensure that we don't accidentally match root directory
-           var urlObj = new URL(currentUrl);
-           if (currentDir !== urlObj.origin) {
-              link.classList.add('active');
-           }
+          // Exact match — score based on how closely the link's own folder matches current segment
+          var dropPath = (new URL(dropItem.href)).pathname;
+          var dropSegment = dropPath.split('/').filter(Boolean)[0] || '';
+          var s = (dropSegment === currentSegment) ? 2 : 1;
+          if (s > score) score = s;
         }
       });
     }
+
+    // Direct link (non-void)
+    var linkUrl = link.href ? link.href.split('#')[0].split('?')[0] : '';
+    if (linkUrl && !linkUrl.includes('javascript:void') && currentUrl === linkUrl) {
+      if (3 > score) score = 3; // highest priority
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = link;
+    }
   });
+
+  if (bestMatch && bestScore >= 0) {
+    bestMatch.classList.add('active');
+  }
 
   var subNavLinks = document.querySelectorAll('.uc-subnav__links a');
   subNavLinks.forEach(function (link) {
