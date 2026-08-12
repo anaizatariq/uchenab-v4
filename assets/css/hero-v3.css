@@ -248,7 +248,7 @@
     radial-gradient(1200px 600px at 85% -10%, rgba(240, 178, 58, .25), transparent 60%),
     radial-gradient(900px 500px at 10% 110%, rgba(90, 95, 150, .4), transparent 60%),
     linear-gradient(135deg, rgba(26, 27, 82, 0.85) 0%, rgba(34, 35, 98, 0.75) 50%, rgba(43, 44, 120, 0.85) 100%),
-    url(''../hero-poster.jpg'') center/cover no-repeat;
+    url('../hero-poster.jpg') center/cover no-repeat;
   background-color: var(--uc-primary);
   color: var(--uc-white);
   padding: clamp(50px, 7vw, 100px) 0 0;
