@@ -2,21 +2,21 @@ const fs = require('fs');
 const path = require('path');
 
 const v1Dir = 'd:/uchenab project/Uchenab-v1/academics/';
-const v2Dir = 'd:/uchenab project/uchenab-v2/academics/';
+const dir = 'd:/uchenab project/uchenab-v2/academics/';
 
 const files = fs.readdirSync(v1Dir).filter(f => f.startsWith('faculty-of-') && f.endsWith('.html'));
 
 for (let file of files) {
     const v1Path = path.join(v1Dir, file);
-    const v2Path = path.join(v2Dir, file);
+    const path = path.join(dir, file);
     
-    if (!fs.existsSync(v2Path)) continue;
+    if (!fs.existsSync(path)) continue;
     
     const v1Content = fs.readFileSync(v1Path, 'utf8');
-    let v2Content = fs.readFileSync(v2Path, 'utf8');
+    let content = fs.readFileSync(path, 'utf8');
     
     // Check if v2 already has faculty-members
-    if (v2Content.includes('id="faculty-members"')) {
+    if (content.includes('id="faculty-members"')) {
         console.log(`Skipping ${file}, already has faculty-members section`);
         continue;
     }
@@ -63,9 +63,9 @@ ${extractedHTML}
 `;
 
         const departmentsRegex = /(<section[^>]*id="departments"[^>]*>[\s\S]*?<\/section>)/i;
-        if (departmentsRegex.test(v2Content)) {
-            v2Content = v2Content.replace(departmentsRegex, `$1\n${newSection}`);
-            fs.writeFileSync(v2Path, v2Content, 'utf8');
+        if (departmentsRegex.test(content)) {
+            content = content.replace(departmentsRegex, `$1\n${newSection}`);
+            fs.writeFileSync(path, content, 'utf8');
             console.log(`Restored profiles in ${file}`);
         } else {
             console.log(`Could not find #departments in V2 ${file}`);

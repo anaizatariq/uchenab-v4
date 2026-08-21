@@ -12,11 +12,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="../assets/css/styles.css" rel="stylesheet"/>
-<link href="../assets/css/home-v2.css" rel="stylesheet"/>
-<link href="../assets/css/header-v3.css" rel="stylesheet"/>
-<link href="../assets/css/academics-v3.css" rel="stylesheet"/>
 <style>
-          .v3-profile-card {
+          .profile-card {
             background: #fff;
             border: 1px solid rgba(0,0,0,0.05);
             border-radius: 16px;
@@ -28,12 +25,12 @@
             flex-direction: column;
             align-items: center;
           }
-          .v3-profile-card:hover {
+          .profile-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.08);
             border-color: rgba(212, 175, 55, 0.3);
           }
-          .v3-profile-card__img {
+          .profile-card__img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
@@ -42,7 +39,7 @@
             border: 3px solid #fff;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
           }
-          .v3-profile-card__name {
+          .profile-card__name {
             font-family: var(--uc-serif), serif;
             font-size: 1.25rem;
             color: var(--uc-primary);
@@ -50,7 +47,7 @@
             font-weight: 600;
             line-height: 1.2;
           }
-          .v3-profile-card__title {
+          .profile-card__title {
             color: var(--uc-gold);
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -60,7 +57,7 @@
           }
         </style></head>
 <body class="acad">
-<a class="v2-skip" href="#main">Skip to main content</a>
+<a class="uc-skip-link" href="#main">Skip to main content</a>
 <!-- ============ TOP UTILITY BAR ============ -->
   <div class="uc-topbar d-none d-lg-block">
     <div class="container-fluid px-4 px-xl-5 d-flex align-items-center justify-content-between">
@@ -135,7 +132,6 @@
           <img src="../assets/uchenab-logo.png" alt="University of Chenab" class="uc-logo">
         </a>
 
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ucMainNav"
           aria-controls="ucMainNav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
@@ -143,137 +139,137 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="ucMainNav">
           <ul class="navbar-nav align-items-xl-center uc-nav">
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">About UChenab <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../about/index.html" class="v3-dropdown-item">This is UChenab</a>
-                <a href="../about/act-2021.html" class="v3-dropdown-item">The University of Chenab Act 2021</a>
-                <a href="../about/patron-message.html" class="v3-dropdown-item">Patron Message</a>
-                <a href="../about/chancellor-message.html" class="v3-dropdown-item">Chairman Message</a>
-                <a href="../about/vc-message.html" class="v3-dropdown-item">Rector Message</a>
-                <a href="../about/pro-rector-message.html" class="v3-dropdown-item">Pro-Rector Message</a>
-                <a href="../about/location.html" class="v3-dropdown-item">Location</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../about/index.html" class="uc-dropdown-item">This is UChenab</a>
+                <a href="../about/act-2021.html" class="uc-dropdown-item">The University of Chenab Act 2021</a>
+                <a href="../about/patron-message.html" class="uc-dropdown-item">Patron Message</a>
+                <a href="../about/chancellor-message.html" class="uc-dropdown-item">Chairman Message</a>
+                <a href="../about/vc-message.html" class="uc-dropdown-item">Rector Message</a>
+                <a href="../about/pro-rector-message.html" class="uc-dropdown-item">Pro-Rector Message</a>
+                <a href="../about/location.html" class="uc-dropdown-item">Location</a>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Admissions <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-mega shadow-lg">
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Apply &amp; Explore</div>
-                  <a href="../admissions/degree-finder.html" class="v3-dropdown-item">Degree Finder</a>
-                  <a href="../admissions/apply.html" class="v3-dropdown-item">Apply</a>
-                  <a href="../admissions/apply.html" class="v3-dropdown-item">Apply (Undergraduate)</a>
-                  <a href="../admissions/apply.html" class="v3-dropdown-item">Apply (Postgraduate)</a>
+              <div class="uc-nav-mega shadow-lg">
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Apply &amp; Explore</div>
+                  <a href="../admissions/degree-finder.html" class="uc-dropdown-item">Degree Finder</a>
+                  <a href="../admissions/apply.html" class="uc-dropdown-item">Apply</a>
+                  <a href="../admissions/apply.html" class="uc-dropdown-item">Apply (Undergraduate)</a>
+                  <a href="../admissions/apply.html" class="uc-dropdown-item">Apply (Postgraduate)</a>
 </div>
                 
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Admission Process</div>
-                  <a href="../admissions/how-to-apply.html" class="v3-dropdown-item">How To Apply</a>
-                  <a href="../admissions/how-to-apply.html#finding-course" class="v3-dropdown-item">Finding Your Course</a>
-                  <a href="../admissions/how-to-apply.html#apply-online" class="v3-dropdown-item">Apply Online</a>
-                  <a href="../admissions/how-to-apply.html#in-campus-test" class="v3-dropdown-item">In-Campus Test</a>
-                  <a href="../admissions/how-to-apply.html#results-enrolment" class="v3-dropdown-item">Results And Enrolment</a>
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Admission Process</div>
+                  <a href="../admissions/how-to-apply.html" class="uc-dropdown-item">How To Apply</a>
+                  <a href="../admissions/how-to-apply.html#finding-course" class="uc-dropdown-item">Finding Your Course</a>
+                  <a href="../admissions/how-to-apply.html#apply-online" class="uc-dropdown-item">Apply Online</a>
+                  <a href="../admissions/how-to-apply.html#in-campus-test" class="uc-dropdown-item">In-Campus Test</a>
+                  <a href="../admissions/how-to-apply.html#results-enrolment" class="uc-dropdown-item">Results And Enrolment</a>
                 </div>
 
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Policies &amp; Support</div>
-                  <a href="../admissions/how-to-apply.html#policies" class="v3-dropdown-item">Admission Policies</a>
-                  <a href="../admissions/how-to-apply.html#financial-aid" class="v3-dropdown-item">How To Get Financial Aid?</a>
-                  <a href="../admissions/faqs.html" class="v3-dropdown-item">FAQ's Related to Admissions</a>
-                  <a href="../admissions/meet-the-team.html" class="v3-dropdown-item">Meet the Team</a>
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Policies &amp; Support</div>
+                  <a href="../admissions/how-to-apply.html#policies" class="uc-dropdown-item">Admission Policies</a>
+                  <a href="../admissions/how-to-apply.html#financial-aid" class="uc-dropdown-item">How To Get Financial Aid?</a>
+                  <a href="../admissions/faqs.html" class="uc-dropdown-item">FAQ's Related to Admissions</a>
+                  <a href="../admissions/meet-the-team.html" class="uc-dropdown-item">Meet the Team</a>
                 </div>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Scholarships &amp; Aid <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../scholarships/merit.html" class="v3-dropdown-item">Merit-Based Scholarships</a>
-                <a href="../scholarships/need-based.html" class="v3-dropdown-item">Need-Based Financial Assistance</a>
-                <a href="../scholarships/special.html" class="v3-dropdown-item">Special Scholarships and Concessions</a>
-                <a href="../scholarships/inter-provincial.html" class="v3-dropdown-item">Inter-Provincial Scholarship</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../scholarships/merit.html" class="uc-dropdown-item">Merit-Based Scholarships</a>
+                <a href="../scholarships/need-based.html" class="uc-dropdown-item">Need-Based Financial Assistance</a>
+                <a href="../scholarships/special.html" class="uc-dropdown-item">Special Scholarships and Concessions</a>
+                <a href="../scholarships/inter-provincial.html" class="uc-dropdown-item">Inter-Provincial Scholarship</a>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Academics <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../academics/adp.html" class="v3-dropdown-item">Associate Degree Programs</a>
-                <a href="../academics/undergraduate.html" class="v3-dropdown-item">Undergraduate</a>
-                <a href="../academics/5th-semester.html" class="v3-dropdown-item">5th Semester Induction Programs</a>
-                <a href="../academics/postgraduate.html" class="v3-dropdown-item">Postgraduate/PhD</a>
-                <a href="../academics/pgd.html" class="v3-dropdown-item">Post Graduate Diplomas (PGD)</a>
-                <a href="../academics/short-courses.html" class="v3-dropdown-item">Short Courses</a>
-                <a href="../academics/diplomas.html" class="v3-dropdown-item">Diploma</a>
-                <a href="../academics/academic-calendar.html" class="v3-dropdown-item">Academic Calendar</a>
-                <a href="../academics/faculties.html" class="v3-dropdown-item">Faculties</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../academics/adp.html" class="uc-dropdown-item">Associate Degree Programs</a>
+                <a href="../academics/undergraduate.html" class="uc-dropdown-item">Undergraduate</a>
+                <a href="../academics/5th-semester.html" class="uc-dropdown-item">5th Semester Induction Programs</a>
+                <a href="../academics/postgraduate.html" class="uc-dropdown-item">Postgraduate/PhD</a>
+                <a href="../academics/pgd.html" class="uc-dropdown-item">Post Graduate Diplomas (PGD)</a>
+                <a href="../academics/short-courses.html" class="uc-dropdown-item">Short Courses</a>
+                <a href="../academics/diplomas.html" class="uc-dropdown-item">Diploma</a>
+                <a href="../academics/academic-calendar.html" class="uc-dropdown-item">Academic Calendar</a>
+                <a href="../academics/faculties.html" class="uc-dropdown-item">Faculties</a>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Life at UChenab <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-mega shadow-lg">
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Core Services</div>
-                  <a href="../campus-life/index.html" class="v3-dropdown-item">This is UChenab</a>
-                  <a href="../campus-life/index.html#housing" class="v3-dropdown-item">Housing</a>
-                  <a href="../campus-life/index.html#dining" class="v3-dropdown-item">Dining</a>
-                  <a href="../campus-life/index.html#health" class="v3-dropdown-item">Health Services</a>
-                  <a href="../campus-life/index.html#student-care" class="v3-dropdown-item">Student Care</a>
-                  <a href="../campus-life/index.html#it-services" class="v3-dropdown-item">IT Services</a>
-                  <a href="../campus-life/index.html#security" class="v3-dropdown-item">Security and Safety</a>
+              <div class="uc-nav-mega shadow-lg">
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Core Services</div>
+                  <a href="../campus-life/index.html" class="uc-dropdown-item">This is UChenab</a>
+                  <a href="../campus-life/index.html#housing" class="uc-dropdown-item">Housing</a>
+                  <a href="../campus-life/index.html#dining" class="uc-dropdown-item">Dining</a>
+                  <a href="../campus-life/index.html#health" class="uc-dropdown-item">Health Services</a>
+                  <a href="../campus-life/index.html#student-care" class="uc-dropdown-item">Student Care</a>
+                  <a href="../campus-life/index.html#it-services" class="uc-dropdown-item">IT Services</a>
+                  <a href="../campus-life/index.html#security" class="uc-dropdown-item">Security and Safety</a>
                 </div>
                 
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Campus Facilities</div>
-                  <a href="../campus-life/index.html#parking" class="v3-dropdown-item">Parking</a>
-                  <a href="../campus-life/index.html#mosque" class="v3-dropdown-item">Mosque</a>
-                  <a href="../campus-life/index.html#environment" class="v3-dropdown-item">Environment and Locality</a>
-                  <a href="../campus-life/index.html#auditorium" class="v3-dropdown-item">Auditorium and Conference Room</a>
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Campus Facilities</div>
+                  <a href="../campus-life/index.html#parking" class="uc-dropdown-item">Parking</a>
+                  <a href="../campus-life/index.html#mosque" class="uc-dropdown-item">Mosque</a>
+                  <a href="../campus-life/index.html#environment" class="uc-dropdown-item">Environment and Locality</a>
+                  <a href="../campus-life/index.html#auditorium" class="uc-dropdown-item">Auditorium and Conference Room</a>
                 </div>
 
-                <div class="v3-mega-column">
-                  <div class="v3-mega-category">Engagement &amp; Activities</div>
-                  <a href="../campus-life/index.html#community" class="v3-dropdown-item">Community Engagement and Diversity</a>
-                  <a href="../campus-life/index.html#clubs" class="v3-dropdown-item">Student's Clubs and Societies</a>
-                  <a href="../campus-life/index.html#sports" class="v3-dropdown-item">Sports</a>
-                  <a href="../campus-life/index.html#fitness" class="v3-dropdown-item">Fitness</a>
-                  <a href="../campus-life/index.html#recreation" class="v3-dropdown-item">Recreational Activities</a>
-                  <a href="../campus-life/index.html#academics" class="v3-dropdown-item">Academics</a>
+                <div class="uc-mega-column">
+                  <div class="uc-mega-category">Engagement &amp; Activities</div>
+                  <a href="../campus-life/index.html#community" class="uc-dropdown-item">Community Engagement and Diversity</a>
+                  <a href="../campus-life/index.html#clubs" class="uc-dropdown-item">Student's Clubs and Societies</a>
+                  <a href="../campus-life/index.html#sports" class="uc-dropdown-item">Sports</a>
+                  <a href="../campus-life/index.html#fitness" class="uc-dropdown-item">Fitness</a>
+                  <a href="../campus-life/index.html#recreation" class="uc-dropdown-item">Recreational Activities</a>
+                  <a href="../campus-life/index.html#academics" class="uc-dropdown-item">Academics</a>
                 </div>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">QEC <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../qec/index.html#performance-evaluation" class="v3-dropdown-item">Institutional Performance Evaluation</a>
-                <a href="../qec/index.html#activity-calendar" class="v3-dropdown-item">Activity Calendar</a>
-                <a href="../qec/index.html#pgpr" class="v3-dropdown-item">Postgraduate Program Review</a>
-                <a href="../qec/index.html#self-assessment" class="v3-dropdown-item">Self-Assessment Process</a>
-                <a href="../qec/index.html#accreditation" class="v3-dropdown-item">Accreditation</a>
-                <a href="../qec/index.html#institutional-research" class="v3-dropdown-item">Institutional Research</a>
-                <a href="../qec/index.html#memberships" class="v3-dropdown-item">Memberships</a>
-                <a href="../qec/index.html#policies" class="v3-dropdown-item">Policies</a>
-                <a href="../qec/index.html#team" class="v3-dropdown-item">Meet the Team</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../qec/index.html#performance-evaluation" class="uc-dropdown-item">Institutional Performance Evaluation</a>
+                <a href="../qec/index.html#activity-calendar" class="uc-dropdown-item">Activity Calendar</a>
+                <a href="../qec/index.html#pgpr" class="uc-dropdown-item">Postgraduate Program Review</a>
+                <a href="../qec/index.html#self-assessment" class="uc-dropdown-item">Self-Assessment Process</a>
+                <a href="../qec/index.html#accreditation" class="uc-dropdown-item">Accreditation</a>
+                <a href="../qec/index.html#institutional-research" class="uc-dropdown-item">Institutional Research</a>
+                <a href="../qec/index.html#memberships" class="uc-dropdown-item">Memberships</a>
+                <a href="../qec/index.html#policies" class="uc-dropdown-item">Policies</a>
+                <a href="../qec/index.html#team" class="uc-dropdown-item">Meet the Team</a>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Research <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../research/index.html" class="v3-dropdown-item">Facilities and Labs</a>
-                <a href="../research/oric.html" class="v3-dropdown-item">Office Of Research, Innovation &amp; Commercialization</a>
-                <a href="../research/index.html#introduction" class="v3-dropdown-item">Introduction And Objectives</a>
-                <a href="../research/index.html#journal" class="v3-dropdown-item">Our Research Journal</a>
-                <a href="../research/index.html#supervisor" class="v3-dropdown-item">Finding a Research Supervisor</a>
-                <a href="../research/index.html#dissertation" class="v3-dropdown-item">Dissertation</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../research/index.html" class="uc-dropdown-item">Facilities and Labs</a>
+                <a href="../research/oric.html" class="uc-dropdown-item">Office Of Research, Innovation &amp; Commercialization</a>
+                <a href="../research/index.html#introduction" class="uc-dropdown-item">Introduction And Objectives</a>
+                <a href="../research/index.html#journal" class="uc-dropdown-item">Our Research Journal</a>
+                <a href="../research/index.html#supervisor" class="uc-dropdown-item">Finding a Research Supervisor</a>
+                <a href="../research/index.html#dissertation" class="uc-dropdown-item">Dissertation</a>
               </div>
             </li>
-            <li class="nav-item v3-has-dropdown">
+            <li class="nav-item uc-has-dropdown">
               <a class="nav-link" href="javascript:void(0);">Offices <i class="bi bi-chevron-down ms-1" style="font-size: 0.7em;"></i></a>
-              <div class="v3-dropdown-simple shadow-lg">
-                <a href="../offices/admissions.html" class="v3-dropdown-item">Office of Admissions</a>
-                <a href="../offices/international-education.html" class="v3-dropdown-item">Office of International Education &amp; Cooperation</a>
-                <a href="../offices/press-media.html" class="v3-dropdown-item">Office of Press Media &amp; Publications</a>
-                <a href="../offices/registrar.html" class="v3-dropdown-item">Office of Registrar</a>
-                <a href="../research/oric.html" class="v3-dropdown-item">Office of Research, Innovation &amp; Commercialization</a>
-                <a href="../offices/student-affairs.html" class="v3-dropdown-item">Office of Student Affairs</a>
+              <div class="uc-nav-dropdown shadow-lg">
+                <a href="../offices/admissions.html" class="uc-dropdown-item">Office of Admissions</a>
+                <a href="../offices/international-education.html" class="uc-dropdown-item">Office of International Education &amp; Cooperation</a>
+                <a href="../offices/press-media.html" class="uc-dropdown-item">Office of Press Media &amp; Publications</a>
+                <a href="../offices/registrar.html" class="uc-dropdown-item">Office of Registrar</a>
+                <a href="../research/oric.html" class="uc-dropdown-item">Office of Research, Innovation &amp; Commercialization</a>
+                <a href="../offices/student-affairs.html" class="uc-dropdown-item">Office of Student Affairs</a>
               </div>
             </li>
 
@@ -306,9 +302,9 @@
   </header>
 
   <!-- Mobile offcanvas -->
-  <div aria-labelledby="v2MobileNavLabel" class="offcanvas offcanvas-end v2-offcanvas" id="v2MobileNav" tabindex="-1">
+  <div aria-labelledby="mobileNavLabel" class="offcanvas offcanvas-end offcanvas" id="mobileNav" tabindex="-1">
     <div class="offcanvas-header border-bottom">
-      <h2 class="offcanvas-title h5 fw-bold" id="v2MobileNavLabel" style="color: var(--uc-primary); font-family: var(--uc-serif);">Menu</h2>
+      <h2 class="offcanvas-title h5 fw-bold" id="mobileNavLabel" style="color: var(--uc-primary); font-family: var(--uc-serif);">Menu</h2>
       <button aria-label="Close" class="btn-close shadow-none" data-bs-dismiss="offcanvas" type="button"></button>
     </div>
     <div class="offcanvas-body p-0">
@@ -620,10 +616,10 @@
 <h2 class="uc-section-title mb-5">Faculty Members</h2>
 <div class="row g-4 mt-4">
 <div class="col-md-6 col-lg-4 mb-4">
-<a class="v3-profile-card text-decoration-none" href="faculty-profile.html"><img alt="Dr. Ahmad Adeel" class="v3-profile-card__img" src="https://uchenab.edu.pk/wp-content/uploads/2024/02/1.jpg"/><h4 class="v3-profile-card__name">Dr. Ahmad Adeel</h4><div class="v3-profile-card__title">Professor</div></a>
+<a class="profile-card text-decoration-none" href="faculty-profile.html"><img alt="Dr. Ahmad Adeel" class="profile-card__img" src="https://uchenab.edu.pk/wp-content/uploads/2024/02/1.jpg"/><h4 class="profile-card__name">Dr. Ahmad Adeel</h4><div class="profile-card__title">Professor</div></a>
 </div>
 <div class="col-md-6 col-lg-4 mb-4">
-<a class="v3-profile-card text-decoration-none" href="faculty-profile.html"><img alt="Dr. Sajid Mohy UL Din" class="v3-profile-card__img" src="https://uchenab.edu.pk/wp-content/uploads/2024/02/15.jpg"/><h4 class="v3-profile-card__name">Dr. Sajid Mohy UL Din</h4><div class="v3-profile-card__title">associate Professor</div></a>
+<a class="profile-card text-decoration-none" href="faculty-profile.html"><img alt="Dr. Sajid Mohy UL Din" class="profile-card__img" src="https://uchenab.edu.pk/wp-content/uploads/2024/02/15.jpg"/><h4 class="profile-card__name">Dr. Sajid Mohy UL Din</h4><div class="profile-card__title">associate Professor</div></a>
 </div>
 </div>
 </section>
@@ -646,14 +642,14 @@
 </div>
 </section>
 </main> <!-- ============ FOOTER ============ -->
-  <footer class="v2-footer">
+  <footer class="footer">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-3 v2-footer__brand">
+        <div class="col-lg-3 footer__brand">
           <img alt="University of Chenab" height="512" src="../assets/uchenab-logo-white.webp" width="512" />
           <p>The University of Chenab is committed to excellence in education, research and innovation - empowering
             future leaders to build a better world.</p>
-          <div class="v2-footer__social">
+          <div class="footer__social">
             <a aria-label="Facebook" href="https://www.facebook.com/uchenab.grt" rel="noopener" target="_blank"><i
                 class="bi bi-facebook"></i></a>
             <a aria-label="Instagram" href="https://www.instagram.com/uchenab_official/" rel="noopener"
@@ -694,7 +690,7 @@
         </div>
         <div class="col-6 col-lg-3">
           <h3>Contact Us</h3>
-          <ul class="list-unstyled v2-footer__contact">
+          <ul class="list-unstyled footer__contact">
             <li><i class="bi bi-geo-alt"></i><span>Adjacent Chenab Bridge, G.T. Road, Gujrat, Pakistan</span></li>
             <li><i class="bi bi-telephone"></i><span>+92 53 111 243 622</span></li>
             <li><i class="bi bi-envelope"></i><span>info@uchenab.edu.pk</span></li>
@@ -702,8 +698,8 @@
           </ul>
         </div>
       </div>
-      <div class="v2-footer__legal">
-        <span>© <span id="v2Year">2026</span> University of Chenab. All rights reserved.</span>
+      <div class="footer__legal">
+        <span>© <span id="year">2026</span> University of Chenab. All rights reserved.</span>
         <span><a href="../about/index.html">Privacy Policy</a> • <a href="../about/index.html">Terms &amp;
             Conditions</a>
           • <a href="../about/index.html">Cookie Policy</a>
@@ -713,7 +709,5 @@
   </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/main.js"></script>
-<script src="../assets/js/home-v2.js"></script>
-<script src="../assets/js/academics-v3.js"></script>
 </body>
 </html>
