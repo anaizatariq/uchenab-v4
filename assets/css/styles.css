@@ -3435,6 +3435,159 @@ img {
   font-family: var(--uc-ui);
 }
 
+/* ============ PREMIUM MOBILE MENU ============ */
+.uc-mobile-menu {
+  background-color: var(--uc-primary) !important;
+  color: #fff !important;
+}
+
+.uc-mobile-menu .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.uc-mobile-menu .offcanvas-title {
+  color: var(--uc-gold) !important;
+}
+
+.uc-mobile-menu .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.uc-mobile-menu .accordion-button {
+  background-color: transparent !important;
+  color: #fff !important;
+  font-family: var(--uc-ui);
+  box-shadow: none !important;
+}
+
+.uc-mobile-menu .accordion-button:not(.collapsed) {
+  color: var(--uc-gold) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.uc-mobile-menu .accordion-button::after {
+  filter: invert(1) brightness(200%);
+}
+
+.uc-mobile-menu .accordion-button:not(.collapsed)::after {
+  filter: invert(72%) sepia(87%) saturate(350%) hue-rotate(352deg) brightness(101%) contrast(104%);
+}
+
+.uc-mobile-menu .accordion-item {
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.uc-mobile-menu .accordion-body {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.uc-mobile-menu .list-group-item {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-family: var(--uc-ui);
+  transition: all 0.2s ease;
+  border: none !important;
+  background: transparent !important;
+}
+
+.uc-mobile-menu .list-group-item:hover,
+.uc-mobile-menu .list-group-item:focus,
+.uc-mobile-menu .list-group-item:active {
+  color: var(--uc-gold) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  padding-left: 2rem !important;
+}
+
+.uc-mobile-menu-footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+.uc-mobile-menu-contact {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.uc-mobile-menu-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.uc-mobile-menu-social a {
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.uc-mobile-menu-social a:hover {
+  color: var(--uc-gold);
+}
+
+.uc-mobile-standalone-link {
+  color: #fff !important;
+  font-family: var(--uc-ui);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.uc-mobile-standalone-link:hover {
+  color: var(--uc-gold) !important;
+}
+
+/* Custom Hamburger Icon */
+.uc-hamburger {
+  border: 1px solid rgba(240, 178, 58, 0.4) !important;
+  background: transparent !important;
+  color: var(--uc-gold) !important;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: 6px !important;
+  font-size: 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.uc-hamburger:hover, .uc-hamburger:active {
+  background: rgba(240, 178, 58, 0.1) !important;
+  box-shadow: 0 0 10px rgba(240, 178, 58, 0.2) !important;
+}
+
+/* Mobile Portal Grid Buttons */
+.uc-mobile-portal-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 0.85rem 0.5rem;
+  color: rgba(255,255,255,0.9) !important;
+  font-family: var(--uc-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.uc-mobile-portal-btn i {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+  color: var(--uc-gold);
+}
+
+.uc-mobile-portal-btn:hover, .uc-mobile-portal-btn:active {
+  background-color: rgba(240, 178, 58, 0.1);
+  border-color: rgba(240, 178, 58, 0.3);
+  color: var(--uc-gold) !important;
+  transform: translateY(-2px);
+}
+
 /* Ensure all headings use the new Cinzel serif */
 h1,
 h2,
@@ -12697,3 +12850,24 @@ body.uc-extended .uc-mono {
 
 
 
+
+.uc-mobile-menu .list-group-item {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+  padding: 0.85rem 1.5rem 0.85rem 2.5rem !important;
+  font-size: 0.95rem !important;
+  transition: all 0.2s ease;
+  font-family: var(--uc-ui);
+}
+
+.uc-mobile-menu .list-group-item:last-child {
+  border-bottom: none !important;
+}
+
+.uc-mobile-menu .list-group-item:hover {
+  color: var(--uc-gold) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  padding-left: 2.85rem !important;
+}

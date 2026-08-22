@@ -159,10 +159,10 @@
           <img src="../assets/uchenab-logo.png" alt="University of Chenab" class="uc-logo">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ucMainNav"
-          aria-controls="ucMainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-list"></i>
-        </button>
+        <button class="navbar-toggler uc-hamburger shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav"
+            aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+          </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="ucMainNav">
           <ul class="navbar-nav align-items-xl-center uc-nav">
@@ -350,237 +350,278 @@
     </div>
   </header>
 
-  <!-- Mobile offcanvas -->
-  <div aria-labelledby="mobileNavLabel" class="offcanvas offcanvas-end offcanvas" id="mobileNav" tabindex="-1">
-    <div class="offcanvas-header border-bottom">
-      <h2 class="offcanvas-title h5 fw-bold" id="mobileNavLabel" style="color: var(--uc-primary); font-family: var(--uc-serif);">Menu</h2>
+  <!-- ============ MOBILE OFF-CANVAS NAV ============ -->
+  <div aria-labelledby="mobileNavLabel" class="offcanvas offcanvas-end uc-mobile-menu" id="mobileNav" tabindex="-1">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title h5 fw-bold" id="mobileNavLabel" style="font-family: var(--uc-serif);">Menu</h2>
       <button aria-label="Close" class="btn-close shadow-none" data-bs-dismiss="offcanvas" type="button"></button>
     </div>
-    <div class="offcanvas-body p-0">
-      <div class="accordion accordion-flush" id="mobNavAccordion">
-        
-        <a class="d-block px-4 py-3 border-bottom fw-bold text-decoration-none" href="../index.html" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">Home</a>
-        
-        <!-- Portals -->
-        <div class="accordion-item border-0 border-bottom">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-portals" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
-              Portals
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-portals">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
-              <div class="list-group list-group-flush">
-                <div class="px-4 pt-3 pb-1">
-                  <h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Students & Applicants</h6>
+    <div class="offcanvas-body d-flex flex-column p-0">
+      
+      <a class="d-block px-4 py-3 border-bottom fw-bold text-decoration-none text-white" href="../index.html" style="font-family: var(--uc-ui); font-size: 1.1rem; border-color: rgba(255,255,255,0.05) !important;">Home</a>
+      
+      <!-- Portals Distinct Dropdown -->
+      <div class="px-3 pt-4 pb-2 border-bottom" style="border-color: rgba(255,255,255,0.05) !important;">
+        <div class="accordion" id="mobNavPortalsOnly">
+          <div class="accordion-item" style="background: rgba(240, 178, 58, 0.05); border: 1px solid rgba(240, 178, 58, 0.3) !important; border-radius: 8px !important; overflow: hidden;">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold shadow-none" data-bs-target="#mobNav-portals-distinct" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1rem 1.25rem; background: transparent; color: var(--uc-gold);">
+                <i class="bi bi-box-arrow-in-right me-2"></i> University Portals
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" data-bs-parent="#mobNavPortalsOnly" id="mobNav-portals-distinct">
+              <div class="accordion-body p-0" style="background: rgba(0,0,0,0.2);">
+                <div class="list-group list-group-flush">
+                  <div class="px-4 pt-3 pb-1">
+                    <h6 class="text-uppercase fw-bold m-0" style="color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 1px;">Students & Applicants</h6>
+                  </div>
+                  <a class="list-group-item list-group-item-action text-white" href="https://sis.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem;"><i class="bi bi-person-badge me-2" style="color: var(--uc-gold);"></i>Student Portal (SIS)</a>
+                  <a class="list-group-item list-group-item-action text-white" href="https://admissions.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem;"><i class="bi bi-file-earmark-text me-2" style="color: var(--uc-gold);"></i>Admission Portal</a>
+                  
+                  <div class="px-4 pt-3 pb-1">
+                    <h6 class="text-uppercase fw-bold m-0" style="color: rgba(255,255,255,0.6); font-size: 0.75rem; letter-spacing: 1px;">Staff & Administration</h6>
+                  </div>
+                  <a class="list-group-item list-group-item-action text-white" href="https://fca.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem;"><i class="bi bi-easel me-2" style="color: var(--uc-gold);"></i>Faculty Portal (FCA)</a>
+                  <a class="list-group-item list-group-item-action text-white" href="https://hms.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem;"><i class="bi bi-people me-2" style="color: var(--uc-gold);"></i>HRIMS</a>
+                  <a class="list-group-item list-group-item-action text-white" href="https://ums.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem;"><i class="bi bi-shield-lock me-2" style="color: var(--uc-gold);"></i>Admin Portal (UMS)</a>
+                  <a class="list-group-item list-group-item-action text-white" href="https://fis.uchenab.edu.pk/" target="_blank" style="background: transparent; border: none; padding: 0.6rem 1.5rem; margin-bottom: 0.5rem;"><i class="bi bi-wallet2 me-2" style="color: var(--uc-gold);"></i>Financial Info System</a>
                 </div>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent fw-bold" href="https://sis.uchenab.edu.pk/" target="_blank" style="color: var(--uc-primary);"><i class="bi bi-person-badge me-2 text-gold"></i>Student Portal (SIS)</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent fw-bold" href="https://admissions.uchenab.edu.pk/" target="_blank" style="color: var(--uc-primary);"><i class="bi bi-file-earmark-text me-2 text-gold"></i>Admission Portal</a>
-                <div class="px-4 pt-4 pb-1">
-                  <h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Staff & Administration</h6>
-                </div>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent" href="https://fca.uchenab.edu.pk/" target="_blank" style="color: #444;"><i class="bi bi-easel me-2 text-gold"></i>Faculty Portal (FCA)</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent" href="https://hms.uchenab.edu.pk/" target="_blank" style="color: #444;"><i class="bi bi-people me-2 text-gold"></i>HRIMS</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent" href="https://ums.uchenab.edu.pk/" target="_blank" style="color: #444;"><i class="bi bi-shield-lock me-2 text-gold"></i>Admin Portal (UMS)</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-2 bg-transparent" href="https://fis.uchenab.edu.pk/" target="_blank" style="color: #444;"><i class="bi bi-wallet2 me-2 text-gold"></i>Financial Info System</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="accordion accordion-flush" id="mobNavAccordion">
         
         <!-- About -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-about" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
-              About
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-about" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+              About UChenab
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-about">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../about/index.html" style="color: #444;">Our Story</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../about/leadership.html" style="color: #444;">Leadership</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../about/accreditations.html" style="color: #444;">Accreditations</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../about/location.html" style="color: #444;">The Campus</a>
+                <a class="list-group-item list-group-item-action" href="../about/index.html">This is UChenab</a>
+                <a class="list-group-item list-group-item-action" href="../about/act-2021.html">The University of Chenab Act 2021</a>
+                <a class="list-group-item list-group-item-action" href="../about/patron-message.html">Patron Message</a>
+                <a class="list-group-item list-group-item-action" href="../about/chancellor-message.html">Chairman Message</a>
+                <a class="list-group-item list-group-item-action" href="../about/vc-message.html">Rector Message</a>
+                <a class="list-group-item list-group-item-action" href="../about/pro-rector-message.html">Pro-Rector Message</a>
+                <a class="list-group-item list-group-item-action" href="../about/location.html">Location</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- Admissions -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-admissions" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-admissions" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Admissions
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-admissions">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../admissions/index.html" style="color: #444;">Overview</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../admissions/how-to-apply.html" style="color: #444;">How to Apply</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../admissions/meet-the-team.html" style="color: #444;">Admissions Team</a>
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Apply &amp; Explore</h6></div>
+                <a class="list-group-item list-group-item-action" href="../admissions/degree-finder.html">Degree Finder</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/apply.html">Apply</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/apply.html">Apply (Undergraduate)</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/apply.html">Apply (Postgraduate)</a>
+
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Admission Process</h6></div>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html">How To Apply</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#finding-course">Finding Your Course</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#apply-online">Apply Online</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#in-campus-test">In-Campus Test</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#results-enrolment">Results And Enrolment</a>
+
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Policies &amp; Support</h6></div>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#policies">Admission Policies</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/how-to-apply.html#financial-aid">How To Get Financial Aid?</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/faqs.html">FAQ's Related to Admissions</a>
+                <a class="list-group-item list-group-item-action" href="../admissions/meet-the-team.html">Meet the Team</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Scholarships -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-scholarships" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-scholarships" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Scholarships &amp; Aid
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-scholarships">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../scholarships/index.html" style="color: #444;">Overview</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../scholarships/merit.html" style="color: #444;">Merit-Based Scholarships</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../scholarships/need-based.html" style="color: #444;">Need-Based Financial Assistance</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../scholarships/inter-provincial.html" style="color: #444;">Inter-Provincial Scholarship</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../scholarships/special.html" style="color: #444;">Special Concessions</a>
+                <a class="list-group-item list-group-item-action" href="../scholarships/merit.html">Merit-Based Scholarships</a>
+                <a class="list-group-item list-group-item-action" href="../scholarships/need-based.html">Need-Based Financial Assistance</a>
+                <a class="list-group-item list-group-item-action" href="../scholarships/special.html">Special Scholarships and Concessions</a>
+                <a class="list-group-item list-group-item-action" href="../scholarships/inter-provincial.html">Inter-Provincial Scholarship</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- Academics -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-academics" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-academics" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Academics
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-academics">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/adp.html" style="color: #444;">Associate Degree Programs</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/undergraduate.html" style="color: #444;">Undergraduate</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/5th-semester.html" style="color: #444;">5th Semester Induction Programs</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/postgraduate.html" style="color: #444;">Postgraduate/PhD</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/pgd.html" style="color: #444;">Post Graduate Diplomas (PGD)</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/short-courses.html" style="color: #444;">Short Courses</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/diplomas.html" style="color: #444;">Diploma</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/academic-calendar.html" style="color: #444;">Academic Calendar</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../academics/faculties.html" style="color: #444;">Faculties</a>
+                <a class="list-group-item list-group-item-action" href="../academics/adp.html">Associate Degree Programs</a>
+                <a class="list-group-item list-group-item-action" href="../academics/undergraduate.html">Undergraduate</a>
+                <a class="list-group-item list-group-item-action" href="../academics/5th-semester.html">5th Semester Induction Programs</a>
+                <a class="list-group-item list-group-item-action" href="../academics/postgraduate.html">Postgraduate/PhD</a>
+                <a class="list-group-item list-group-item-action" href="../academics/pgd.html">Post Graduate Diplomas (PGD)</a>
+                <a class="list-group-item list-group-item-action" href="../academics/short-courses.html">Short Courses</a>
+                <a class="list-group-item list-group-item-action" href="../academics/diplomas.html">Diploma</a>
+                <a class="list-group-item list-group-item-action" href="../academics/academic-calendar.html">Academic Calendar</a>
+                <a class="list-group-item list-group-item-action" href="../academics/faculties.html">Faculties</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- Life at UChenab -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-life" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-life" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Life at UChenab
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-life">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/index.html" style="color: #444;">Overview</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/housing.html" style="color: #444;">Housing</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/dining.html" style="color: #444;">Dining</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/health.html" style="color: #444;">Health Services</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/student-care.html" style="color: #444;">Student Care</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/it-services.html" style="color: #444;">IT Services</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/security.html" style="color: #444;">Security and Safety</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/parking.html" style="color: #444;">Parking</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/mosque.html" style="color: #444;">Mosque</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/environment.html" style="color: #444;">Environment and Locality</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/auditorium.html" style="color: #444;">Auditorium and Conference</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/community.html" style="color: #444;">Community Engagement</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/clubs.html" style="color: #444;">Clubs and Societies</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/sports.html" style="color: #444;">Sports</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/fitness.html" style="color: #444;">Fitness</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../campus-life/recreation.html" style="color: #444;">Recreational Activities</a>
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Core Services</h6></div>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html">This is UChenab</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#housing">Housing</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#dining">Dining</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#health">Health Services</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#student-care">Student Care</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#it-services">IT Services</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#security">Security and Safety</a>
+
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Campus Facilities</h6></div>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#parking">Parking</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#mosque">Mosque</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#environment">Environment and Locality</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#auditorium">Auditorium and Conference Room</a>
+
+                <div class="px-4 pt-3 pb-1"><h6 class="text-uppercase fw-bold m-0" style="color: var(--uc-gold); font-size: 0.75rem; letter-spacing: 1px;">Engagement &amp; Activities</h6></div>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#community">Community Engagement and Diversity</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#clubs">Student's Clubs and Societies</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#sports">Sports</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#fitness">Fitness</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#recreation">Recreational Activities</a>
+                <a class="list-group-item list-group-item-action" href="../campus-life/index.html#academics">Academics</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- QEC -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-qec" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-qec" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               QEC
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-qec">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/index.html" style="color: #444;">Overview</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/functions.html" style="color: #444;">Functions &amp; Objectives</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/policies.html" style="color: #444;">Policies</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/self-assessment.html" style="color: #444;">Self-Assessment Process</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/performance-evaluation.html" style="color: #444;">Institutional Performance</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/pgpr.html" style="color: #444;">Postgraduate Program Review</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/accreditation.html" style="color: #444;">Accreditation</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/memberships.html" style="color: #444;">Memberships</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/institutional-research.html" style="color: #444;">Institutional Research</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../qec/activity-calendar.html" style="color: #444;">Activity Calendar</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#performance-evaluation">Institutional Performance Evaluation</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#activity-calendar">Activity Calendar</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#pgpr">Postgraduate Program Review</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#self-assessment">Self-Assessment Process</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#accreditation">Accreditation</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#memberships">Memberships</a>
+                <a class="list-group-item list-group-item-action" href="../qec/index.html#team">Meet the Team</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- Research -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-research" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-research" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Research
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-research">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/index.html" style="color: #444;">Overview</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/centers.html" style="color: #444;">Facilities and Labs</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/oric.html" style="color: #444;">ORIC</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/research-management.html" style="color: #444;">Research Management</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/innovation-commercialization.html" style="color: #444;">Innovation & Commercialization</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/journal.html" style="color: #444;">Our Research Journal</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/supervisor.html" style="color: #444;">Finding a Supervisor</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/dissertation.html" style="color: #444;">Dissertation</a>
+                <a class="list-group-item list-group-item-action" href="../research/index.html">Overview</a>
+                <a class="list-group-item list-group-item-action" href="../research/centers.html">Facilities and Labs</a>
+                <a class="list-group-item list-group-item-action" href="../research/oric.html">ORIC</a>
+                <a class="list-group-item list-group-item-action" href="../research/research-management.html">Research Management</a>
+                <a class="list-group-item list-group-item-action" href="../research/innovation-commercialization.html">Innovation & Commercialization</a>
+                <a class="list-group-item list-group-item-action" href="../research/journal.html">Our Research Journal</a>
+                <a class="list-group-item list-group-item-action" href="../research/supervisor.html">Finding a Supervisor</a>
+                <a class="list-group-item list-group-item-action" href="../research/dissertation.html">Dissertation</a>
               </div>
             </div>
           </div>
         </div>
         
         <!-- Offices -->
-        <div class="accordion-item border-0 border-bottom">
+        <div class="accordion-item border-bottom-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed shadow-none fw-bold" data-bs-target="#mobNav-offices" data-bs-toggle="collapse" type="button" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">
+            <button class="accordion-button collapsed fw-bold" data-bs-target="#mobNav-offices" data-bs-toggle="collapse" type="button" style="font-size: 1.1rem; padding: 1.25rem 1.5rem;">
               Offices
             </button>
           </h2>
           <div class="accordion-collapse collapse" data-bs-parent="#mobNavAccordion" id="mobNav-offices">
-            <div class="accordion-body p-0" style="background-color: var(--uc-cream-2);">
+            <div class="accordion-body p-0">
               <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../offices/admissions.html" style="color: #444;">Office of Admissions</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../offices/international-education.html" style="color: #444;">Office of International Education</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../offices/press-media.html" style="color: #444;">Office of Press Media</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../offices/registrar.html" style="color: #444;">Office of Registrar</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../research/oric.html" style="color: #444;">ORIC</a>
-                <a class="list-group-item list-group-item-action border-0 ps-4 py-3 bg-transparent" href="../offices/student-affairs.html" style="color: #444;">Office of Student Affairs</a>
+                <a class="list-group-item list-group-item-action" href="../offices/admissions.html">Office of Admissions</a>
+                <a class="list-group-item list-group-item-action" href="../offices/international-education.html">Office of International Education &amp; Cooperation</a>
+                <a class="list-group-item list-group-item-action" href="../offices/press-media.html">Office of Press Media &amp; Publications</a>
+                <a class="list-group-item list-group-item-action" href="../offices/registrar.html">Office of Registrar</a>
+                <a class="list-group-item list-group-item-action" href="../research/oric.html">Office of Research, Innovation &amp; Commercialization</a>
+                <a class="list-group-item list-group-item-action" href="../offices/student-affairs.html">Office of Student Affairs</a>
               </div>
             </div>
           </div>
         </div>
         
       </div>
+
+      <a class="d-block px-4 py-3 border-top border-secondary fw-bold uc-mobile-standalone-link mt-2" href="../career/index.html" style="font-size: 1.1rem; padding: 1.25rem 1.5rem; border-color: rgba(255,255,255,0.05) !important;">Careers</a>
+      <a class="d-block px-4 py-3 border-bottom border-secondary fw-bold uc-mobile-standalone-link" href="../alumni/index.html" style="font-size: 1.1rem; padding: 1.25rem 1.5rem; border-color: rgba(255,255,255,0.05) !important;">Alumni</a>
       
-      <a class="d-block px-4 py-3 border-bottom fw-bold text-decoration-none" href="../career/index.html" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">Careers</a>
-      <a class="d-block px-4 py-3 border-bottom fw-bold text-decoration-none" href="../alumni/index.html" style="color: var(--uc-primary); font-size: 1.1rem; padding: 1.25rem 1.5rem;">Alumni</a>
-      
-      <div class="p-4 mt-2">
+      <div class="p-4 mt-2 mb-3">
         <a class="btn w-100 fw-bold border-0 shadow-sm" href="https://admissions.uchenab.edu.pk/" style="background: var(--uc-gold); color: var(--uc-ink); padding: 0.85rem;" target="_blank">Apply Now</a>
       </div>
       
+      <!-- New Menu Footer with Contact Info -->
+      <div class="uc-mobile-menu-footer">
+        <div class="uc-mobile-menu-contact">
+          <span><i class="bi bi-geo-alt me-2" style="color: var(--uc-gold);"></i> Adjacent Chenab Bridge, G.T. Road, Gujrat</span>
+          <span><i class="bi bi-telephone me-2" style="color: var(--uc-gold);"></i> 053 111 243 622</span>
+          <span><i class="bi bi-envelope me-2" style="color: var(--uc-gold);"></i> info@uchenab.edu.pk</span>
+        </div>
+        <div class="uc-mobile-menu-social">
+          <a href="https://www.facebook.com/uchenab.grt" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/uchenab_official/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/the-university-of-chenab-gujrat/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/@uchenab_grt" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
     </div>
   </div>
-  <main id="main">
+<main id="main">
     <!-- V3 ELEGANT HERO -->
     <section class="uc-hero" style="min-height: 70vh; display: flex; align-items: center;">
       <div aria-hidden="true" class="uc-hero__media"
