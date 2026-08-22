@@ -549,6 +549,7 @@
     border: 2px solid #e9ecef;
     padding: 0.25rem;
     transition: all 0.3s;
+    flex-wrap: nowrap !important;
   }
   
   .df-main-search:focus-within {
@@ -562,6 +563,7 @@
     border-radius: 50px;
     border: none;
     transition: all 0.3s;
+    white-space: nowrap;
   }
   
   .df-btn-primary:hover {
@@ -757,8 +759,8 @@
           <h3 class="mb-3" style="font-family: var(--uc-serif); color: var(--df-navy);">What do you want to study?</h3>
           <div class="input-group input-group-lg df-main-search">
             <span class="input-group-text bg-white border-0 text-muted ps-4"><i class="bi bi-search fs-5"></i></span>
-            <input type="text" id="dfSearch" class="form-control border-0 bg-white shadow-none ps-2" placeholder="Search by degree name or keyword... (e.g., Computer Science, Nursing)">
-            <button id="dfSubmit" class="btn df-btn-primary px-4 px-md-5 fw-bold">Find Programs</button>
+            <input type="text" id="dfSearch" class="form-control border-0 bg-white shadow-none ps-2" placeholder="Search degrees (e.g. Computing)...">
+            <button id="dfSubmit" class="btn df-btn-primary px-3 px-md-5 fw-bold">Find</button>
           </div>
         </div>
       </div>
