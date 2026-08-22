@@ -1,8 +1,8 @@
 /* ==========================================================================
    University of Chenab
    Custom design system on top of Bootstrap 5
-   Brand: #222362 (Primary Dark) Â· #5a5f96 (Primary Light) Â·
-          #f0b23a (Secondary Gold) Â· #e2dfd5 (Accent Cream)
+   Brand: #222362 (Primary Dark) • #5a5f96 (Primary Light) •
+          #f0b23a (Secondary Gold) • #e2dfd5 (Accent Cream)
    ========================================================================== */
 
 :root {
@@ -26,7 +26,7 @@
   --uc-shadow-lg: 0 40px 80px -30px rgba(34, 35, 98, 0.35);
 
   --uc-serif: "Cinzel", Georgia, serif;
-  --uc-sans: "Roboto", Arial, sans-serif;
+  --uc-sans: "Raleway", Arial, sans-serif;
   --uc-ui: "Inter", system-ui, -apple-system, sans-serif;
 }
 
@@ -1346,6 +1346,24 @@ img {
   line-height: 1.2;
 }
 
+@media (max-width: 575px) {
+  .uc-lifecard {
+    padding: 0.75rem 0.6rem;
+    gap: 0.5rem;
+    border-radius: 12px;
+  }
+  .uc-lifecard i {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+  .uc-lifecard span {
+    font-size: 0.8rem;
+    line-height: 1.15;
+    word-break: break-word;
+  }
+}
 
 /* -------------------- News + Events -------------------- */
 .uc-news {
@@ -2359,6 +2377,14 @@ img {
   animation: ucSlowSpin 60s linear infinite;
 }
 
+@media (max-width: 991px) {
+  .uc-monograph-bg {
+    width: 320px;
+    height: 320px;
+    opacity: 0.03;
+  }
+}
+
 @keyframes ucSlowSpin {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -3362,27 +3388,23 @@ img {
   transform: scale(1.15);
 }
 
-
 .uc-portals-trigger {
-  background: rgba(240, 178, 58, 0.1);
-  border: 1px solid rgba(240, 178, 58, 0.5);
-  color: var(--uc-gold);
-  padding: 0.35rem 1rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(240, 178, 58, 0.1);
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  border-radius: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .uc-portals-trigger:hover,
 .uc-topbar-dropdown:hover .uc-portals-trigger {
-  background: var(--uc-gold);
-  border-color: var(--uc-gold);
-  color: var(--uc-primary);
-  box-shadow: 0 0 15px rgba(240, 178, 58, 0.3);
+  color: #fff;
 }
 
 
@@ -5566,8 +5588,8 @@ select:focus-visible,
 /* -------------------- Faculties Wide Bento -------------------- */
 .uc-faculties-bento-wide {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -5598,6 +5620,14 @@ select:focus-visible,
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(34, 35, 98, 0.02);
+}
+
+@media (max-width: 575px) {
+  .uc-faculties-bento-wide { gap: 0.75rem; }
+  .uc-fb-wide-item { padding: 1.25rem 1rem; min-height: 130px; }
+  .uc-fb-wide-num { font-size: 3rem !important; right: 0.75rem !important; top: 0.75rem !important; }
+  .uc-fb-wide-title { font-size: 1rem !important; line-height: 1.2 !important; }
+  .uc-fb-wide-sub { font-size: 0.6rem !important; margin-bottom: 0.25rem !important; }
 }
 
 .uc-fb-wide-num {
@@ -7299,16 +7329,16 @@ select:focus-visible,
 
 :root {
   --navy: #222362;
-  --navy-light: #2c2d7c;
+  --navy-light: #5a5f96;
   --gold: #f0b23a;
   --gold-dark: #d99a24;
-  --cream: #fcf9f2;
+  --cream: #e2dfd5;
   --white: #ffffff;
   --text-body: #4a4a5a;
   --text-muted: #808090;
 
   --font-serif: 'Cinzel', serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-body: 'Raleway', sans-serif;
   --font-ui: 'Inter', sans-serif;
 }
 
