@@ -321,8 +321,8 @@ img {
 }
 
 .uc-navbar {
-  padding-top: 0.25rem !important;
-  padding-bottom: 0.25rem !important;
+  padding-top: 2.1rem !important;
+  padding-bottom: 2.1rem !important;
   min-height: auto !important;
 }
 
@@ -7042,8 +7042,8 @@ select:focus-visible,
 }
 
 .uc-navbar {
-  padding-top: 0.35rem !important;
-  padding-bottom: 0.35rem !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
   min-height: auto !important;
 }
 
