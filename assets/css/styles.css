@@ -3872,8 +3872,7 @@ body {
 }
 
 /* ---- Left monogram panel ---- */
-.uc-dignitary-card__
--panel {
+.uc-dignitary-card__ -panel {
   background: linear-gradient(160deg, #1a1c52 0%, var(--uc-primary) 55%, #2b2d7a 100%);
   position: relative;
   display: flex;
@@ -7034,6 +7033,7 @@ select:focus-visible,
 }
 
 @media (min-width: 1200px) {
+
   .uc-header .container-fluid,
   .uc-topbar .container-fluid {
     padding-left: 2rem !important;
@@ -13488,19 +13488,20 @@ body.uc-extended .uc-mono {
 }
 
 /* Override inline max-width and constrain the footer container */
-.uc-footer > .container-fluid {
+.uc-footer>.container-fluid {
   max-width: 1200px !important;
 }
 
 /* Desktop: tight, perfectly aligned columns */
 @media (min-width: 992px) {
-  .uc-footer > .container-fluid > .row {
+  .uc-footer>.container-fluid>.row {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
     justify-content: space-between;
   }
-  .uc-footer > .container-fluid > .row > div {
+
+  .uc-footer>.container-fluid>.row>div {
     flex: 0 1 auto !important;
     width: auto !important;
     max-width: none !important;
@@ -13508,8 +13509,9 @@ body.uc-extended .uc-mono {
     padding-right: 0 !important;
     margin-bottom: 0 !important;
   }
+
   /* Logo column fixed */
-  .uc-footer > .container-fluid > .row > div:first-child {
+  .uc-footer>.container-fluid>.row>div:first-child {
     flex: 0 0 130px !important;
     width: 130px !important;
   }
@@ -13627,10 +13629,12 @@ body.uc-extended .uc-mono {
   .uc-footer {
     padding: 2rem 0 0 0;
   }
+
   .uc-footer .uc-footer-brand {
     text-align: center !important;
     margin-bottom: 0.5rem;
   }
+
   .uc-footer .uc-footer-contact {
     margin-top: 0.75rem !important;
   }
@@ -13648,9 +13652,11 @@ body.uc-extended .uc-mono {
   transform: translateX(5px);
   background: var(--uc-primary-light) !important;
 }
+
 .uc-policy-link:hover span {
   color: var(--uc-white) !important;
 }
+
 .uc-policy-link:hover i {
   color: var(--uc-white) !important;
 }
@@ -13665,11 +13671,11 @@ body.uc-extended .uc-mono {
   gap: 1.8rem;
 }
 
-.uc-main-nav-list > li {
+.uc-main-nav-list>li {
   position: relative;
 }
 
-.uc-main-nav-list > li > a {
+.uc-main-nav-list>li>a {
   color: var(--uc-primary);
   text-decoration: none;
   font-family: var(--uc-ui);
@@ -13681,7 +13687,7 @@ body.uc-extended .uc-mono {
   transition: color 0.3s ease;
 }
 
-.uc-main-nav-list > li > a:hover {
+.uc-main-nav-list>li>a:hover {
   color: var(--uc-gold);
 }
 
