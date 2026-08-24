@@ -13586,16 +13586,16 @@ body.uc-extended .uc-mono {
 }
 
 .uc-footer .uc-footer-links li a:hover {
-  color: #fff;
+  color: var(--uc-gold);
 }
 
 /* Bottom bar */
 .uc-footer-bottom {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--uc-primary-light);
   padding: 0.85rem 0;
   margin-top: 2rem;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.78rem;
+  color: var(--uc-white);
+  font-size: 0.85rem;
 }
 
 .uc-footer-bottom .container-fluid {
@@ -13613,13 +13613,13 @@ body.uc-extended .uc-mono {
 }
 
 .uc-footer-bottom .uc-social-links a {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--uc-white);
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .uc-footer-bottom .uc-social-links a:hover {
-  color: #fff;
+  color: var(--uc-gold);
 }
 
 /* Tablet adjustments */
@@ -13642,4 +13642,52 @@ body.uc-extended .uc-mono {
     margin-top: 0.25rem;
     margin-bottom: 0.6rem;
   }
+}
+
+.uc-policy-link:hover {
+  transform: translateX(5px);
+  background: var(--uc-primary-light) !important;
+}
+.uc-policy-link:hover span {
+  color: var(--uc-white) !important;
+}
+.uc-policy-link:hover i {
+  color: var(--uc-white) !important;
+}
+
+/* Legacy Navbar Fix (for contact/index.html and other old layout pages) */
+.uc-main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.8rem;
+}
+
+.uc-main-nav-list > li {
+  position: relative;
+}
+
+.uc-main-nav-list > li > a {
+  color: var(--uc-primary);
+  text-decoration: none;
+  font-family: var(--uc-ui);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.uc-main-nav-list > li > a:hover {
+  color: var(--uc-gold);
+}
+
+.uc-main-nav-list .uc-has-dropdown:hover .uc-nav-mega,
+.uc-main-nav-list .uc-has-dropdown:hover .uc-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
