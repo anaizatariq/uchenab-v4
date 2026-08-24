@@ -13611,7 +13611,7 @@ body.uc-extended .uc-mono {
 
 .uc-footer-bottom .uc-social-links {
   display: flex;
-  gap: 0.85rem;
+  gap: 1.5rem;
 }
 
 .uc-footer-bottom .uc-social-links a {
