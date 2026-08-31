@@ -28,6 +28,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <!-- updated global stylesheet (unmodified) + updated homepage partial -->
   <link href="./assets/css/styles.css" rel="stylesheet" />
+
+  <style>
+              .uc-facfinder__panel {
+                min-height: 380px;
+              }
+
+              .uc-proglist li {
+                padding: 1.15rem 1.25rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                transition: all 0.3s ease;
+                border-left: 3px solid transparent;
+              }
+
+              .uc-proglist li:last-child {
+                border-bottom: 1px solid transparent;
+              }
+
+              .uc-proglist li:hover {
+                background: rgba(255, 255, 255, 0.04);
+                border-left: 3px solid var(--uc-gold);
+                padding-left: 1.75rem;
+              }
+  </style>
 </head>
 
 <body>
@@ -843,7 +866,7 @@
     </section>
 
 
-    <!-- Faculties finder -->
+    <!-- Program finder -->
     <div class="container">
       <div class="uc-facfinder mt-5">
         <div class="row align-items-center g-4">
@@ -859,29 +882,6 @@
             </p>
           </div>
           <div class="col-lg-8">
-
-            <style>
-              .uc-facfinder__panel {
-                min-height: 380px;
-              }
-
-              .uc-proglist li {
-                padding: 1.15rem 1.25rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-                transition: all 0.3s ease;
-                border-left: 3px solid transparent;
-              }
-
-              .uc-proglist li:last-child {
-                border-bottom: 1px solid transparent;
-              }
-
-              .uc-proglist li:hover {
-                background: rgba(255, 255, 255, 0.04);
-                border-left: 3px solid var(--uc-gold);
-                padding-left: 1.75rem;
-              }
-            </style>
 
             <div class="uc-facfinder__tabs" role="tablist">
               <button class="uc-tab active" data-tab="fac-cs">Computer Science</button>
@@ -974,21 +974,21 @@
             </div>
             <div class="uc-facfinder__panel" id="fac-sci" data-panel hidden>
               <ul class="uc-proglist">
-                <li><a href="academics/faculty-of-physical-biological-sciences.html">BS Physics</a><span>4 years</span>
+                <li><a href="academics/ug-physics-bs.html">BS Physics</a><span>4 years</span>
                 </li>
-                <li><a href="academics/faculty-of-physical-biological-sciences.html">BS Mathematics</a><span>4
+                <li><a href="academics/ug-mathematics-bs.html">BS Mathematics</a><span>4
                     years</span></li>
-                <li><a href="academics/faculty-of-physical-biological-sciences.html">MPhil Physics</a><span>2
+                <li><a href="academics/pg-physics-mphil.html">MPhil Physics</a><span>2
                     years</span></li>
-                <li><a href="academics/faculty-of-physical-biological-sciences.html">MPhil Mathematics</a><span>2
+                <li><a href="academics/pg-mathematics-mphil.html">MPhil Mathematics</a><span>2
                     years</span></li>
-                <li><a href="academics/faculty-of-physical-biological-sciences.html">PhD Mathematics</a><span>3+
+                <li><a href="academics/phd-mathematics.html">PhD Mathematics</a><span>3+
                     years</span></li>
               </ul>
             </div>
             <div class="uc-facfinder__panel" id="fac-law" data-panel hidden>
               <ul class="uc-proglist">
-                <li><a href="academics/faculty-of-law.html">LLB (Bachelor of Law)</a><span>5 years</span></li>
+                <li><a href="academics/ug-llb.html">LLB (Bachelor of Law)</a><span>5 years</span></li>
               </ul>
             </div>
           </div>
